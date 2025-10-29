@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Audio Video Converter</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Audio Video Converter</h1>
+    </header>
+    <main>
+        <div class="container">
+            <div class="input-section">
+                <h2 id="input-label">Audio File</h2>
+                <div class="drop-zone" id="audio-drop-zone">
+                    <p>Drag & drop your audio file here or click to select</p>
+                    <input type="file" id="audio-file-input" accept="audio/*" hidden>
+                </div>
+                <div class="image-picker" id="image-picker" style="display: none;">
+                    <h3>Background Image</h3>
+                    <div class="drop-zone" id="image-drop-zone">
+                        <p>Drag & drop your image file here or click to select</p>
+                        <input type="file" id="image-file-input" accept="image/*" hidden>
+                    </div>
+                </div>
+            </div>
+            <div class="toggle-section">
+                <button id="toggle-mode" class="toggle-btn">
+                    <span id="left-label">Audio</span>
+                    <span class="arrow">↔</span>
+                    <span id="right-label">Video</span>
+                </button>
+            </div>
+            <div class="output-section">
+                <h2 id="output-label">Video Output</h2>
+                <div class="output-area" id="output-area">
+                    <p>Converted file will appear here</p>
+                </div>
+                <button id="convert-btn" class="convert-btn">Convert</button>
+                <button id="download-btn" class="download-btn" style="display: none;">Download</button>
+            </div>
+        </div>
+    </main>
+    <script src="scripts/ffmpeg.js"></script>
+    <script src="scripts/util.js"></script>
+    <script src="scripts/script.js"></script>
+</body>
+</html>
