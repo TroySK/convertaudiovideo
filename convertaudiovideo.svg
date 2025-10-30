@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="200" height="200">
+  <!-- Background circle -->
+  <circle cx="100" cy="100" r="95" fill="#6366f1" opacity="0.1"/>
+  
+  <!-- Video symbol (left side - play button in frame) -->
+  <g id="video-icon">
+    <!-- Video frame -->
+    <rect x="30" y="70" width="50" height="40" rx="4" fill="none" stroke="#6366f1" stroke-width="3"/>
+    <!-- Play button -->
+    <polygon points="48,80 48,100 65,90" fill="#6366f1"/>
+    <!-- Corner accents -->
+    <line x1="30" y1="75" x2="30" y2="70" stroke="#6366f1" stroke-width="3" stroke-linecap="round"/>
+    <line x1="30" y1="70" x2="35" y2="70" stroke="#6366f1" stroke-width="3" stroke-linecap="round"/>
+  </g>
+  
+  <!-- Audio symbol (right side - waveform) -->
+  <g id="audio-icon">
+    <!-- Waveform bars -->
+    <rect x="125" y="85" width="6" height="30" rx="3" fill="#10b981"/>
+    <rect x="135" y="75" width="6" height="50" rx="3" fill="#10b981"/>
+    <rect x="145" y="80" width="6" height="40" rx="3" fill="#10b981"/>
+    <rect x="155" y="70" width="6" height="60" rx="3" fill="#10b981"/>
+    <rect x="165" y="82" width="6" height="36" rx="3" fill="#10b981"/>
+  </g>
+  
+  <!-- Bidirectional arrows in center -->
+  <g id="arrows">
+    <!-- Arrow pointing right (audio to video) -->
+    <path d="M 85 90 L 110 90" stroke="#8b5cf6" stroke-width="3" stroke-linecap="round" fill="none"/>
+    <polygon points="110,90 105,87 105,93" fill="#8b5cf6"/>
+    
+    <!-- Arrow pointing left (video to audio) -->
+    <path d="M 115 110 L 90 110" stroke="#8b5cf6" stroke-width="3" stroke-linecap="round" fill="none"/>
+    <polygon points="90,110 95,107 95,113" fill="#8b5cf6"/>
+  </g>
+  
+  <!-- Decorative elements -->
+  <circle cx="55" cy="55" r="3" fill="#6366f1" opacity="0.3"/>
+  <circle cx="145" cy="145" r="3" fill="#10b981" opacity="0.3"/>
+  <circle cx="160" cy="50" r="2" fill="#8b5cf6" opacity="0.3"/>
+  <circle cx="40" cy="140" r="2" fill="#8b5cf6" opacity="0.3"/>
+</svg>
