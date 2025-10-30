@@ -147,8 +147,8 @@ async function convertAudioToVideo() {
         await ffmpeg.writeFile('input.mp3', await FFmpegUtil.fetchFile(audioFile));
         await ffmpeg.writeFile('input.jpg', await FFmpegUtil.fetchFile(imageFile));
 
-        // Run FFmpeg command
-        await ffmpeg.exec(['-loop', '1', '-i', 'input.jpg', '-i', 'input.mp3', '-c:v', 'libx264', '-tune', 'stillimage', '-c:a', 'aac', '-b:a', '192k', '-pix_fmt', 'yuv420p', '-shortest', 'output.mp4']);
+        // Run FFmpeg command with optimized settings for speed
+        await ffmpeg.exec(['-loop', '1', '-i', 'input.jpg', '-i', 'input.mp3', '-c:v', 'libx264', '-preset', 'ultrafast', '-crf', '28', '-c:a', 'aac', '-b:a', '128k', '-pix_fmt', 'yuv420p', '-shortest', 'output.mp4']);
 
         // Read output file
         const data = await ffmpeg.readFile('output.mp4');
@@ -186,8 +186,8 @@ async function convertVideoToAudio() {
         // Write file to FFmpeg FS
         await ffmpeg.writeFile('input.mp4', await FFmpegUtil.fetchFile(videoFile));
 
-        // Run FFmpeg command
-        await ffmpeg.exec(['-i', 'input.mp4', '-vn', '-acodec', 'mp3', '-ab', '192k', 'output.mp3']);
+        // Run FFmpeg command with optimized settings for speed
+        await ffmpeg.exec(['-i', 'input.mp4', '-vn', '-acodec', 'mp3', '-ab', '128k', '-preset', 'ultrafast', 'output.mp3']);
 
         // Read output file
         const data = await ffmpeg.readFile('output.mp3');
